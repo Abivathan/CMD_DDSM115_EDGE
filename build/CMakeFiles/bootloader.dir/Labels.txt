@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/CMakeFiles/bootloader
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/CMakeFiles/bootloader.rule
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/CMakeFiles/bootloader-complete.rule
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

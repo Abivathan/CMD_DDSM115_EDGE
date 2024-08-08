@@ -1,0 +1,39 @@
+[1/5] cd /home/abivathan/esp/CMD_DDSM115_EDGE/build/esp-idf/esptool_py && /home/abivathan/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/abivathan/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/abivathan/esp/CMD_DDSM115_EDGE/build/partition_table/partition-table.bin /home/abivathan/esp/CMD_DDSM115_EDGE/build/CMD_DDSM115_EDGE.bin
+CMD_DDSM115_EDGE.bin binary size 0x37110 bytes. Smallest app partition is 0x100000 bytes. 0xc8ef0 bytes (78%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader/esp-idf/esptool_py && /home/abivathan/.espressif/python_env/idf5.3_py3.10_env/bin/python /home/abivathan/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/abivathan/esp/CMD_DDSM115_EDGE/build/bootloader/bootloader.bin
+Bootloader binary size 0x5260 bytes. 0x2da0 bytes (36%) free.
+[2/3] cd /home/abivathan/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/abivathan/esp/esp-idf -D "SERIAL_TOOL=/home/abivathan/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/abivathan/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/abivathan/esp/CMD_DDSM115_EDGE/build -P /home/abivathan/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 CMD_DDSM115_EDGE.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev4
+Serial port /dev/ttyUSB0
+Connecting...
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: ec:da:3b:66:0e:80
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Traceback (most recent call last):
+  File "/home/abivathan/.espressif/python_env/idf5.3_py3.10_env/lib/python3.10/site-packages/esptool/__init__.py", line 1170, in _main
+    main()
+  File "/home/abivathan/.espressif/python_env/idf5.3_py3.10_env/lib/python3.10/site-packages/esptool/__init__.py", line 917, in main
+    esp.flash_set_parameters(flash_size_bytes(flash_size))
+  File "/home/abivathan/.espressif/python_env/idf5.3_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 1256, in flash_set_parameters
+    self.check_command(
+  File "/home/abivathan/.espressif/python_env/idf5.3_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 492, in check_command
+    val, data = self.command(op, data, chk, timeout=timeout)
+  File "/home/abivathan/.espressif/python_env/idf5.3_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 461, in command
+    p = self.read()
+  File "/home/abivathan/.espressif/python_env/idf5.3_py3.10_env/lib/python3.10/site-packages/esptool/loader.py", line 394, in read
+    return next(self._slip_reader)
+StopIteration
+
+A fatal error occurred: The chip stopped responding.
+FAILED: CMakeFiles/flash /home/abivathan/esp/CMD_DDSM115_EDGE/build/CMakeFiles/flash 
+cd /home/abivathan/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/abivathan/esp/esp-idf -D "SERIAL_TOOL=/home/abivathan/.espressif/python_env/idf5.3_py3.10_env/bin/python;;/home/abivathan/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/abivathan/esp/CMD_DDSM115_EDGE/build -P /home/abivathan/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.
